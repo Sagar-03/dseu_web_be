@@ -38,6 +38,14 @@ const coursesUG = require("./routes/courses/UG/UG.js");
 const coursesBSC = require("./routes/courses/UG/BSC.js");
 const coursesCertificate = require("./routes/courses/certificateCourse.js");
 
+const amenitiesFacilities = require("./routes/amenities/facilities.js");
+const amenitiesHostels = require("./routes/amenities/hostels.js");
+const amenitiesPlacement = require("./routes/amenities/placement.js");
+const amenitiesSports = require("./routes/amenities/sports.js");
+const amenitiesLibrary = require("./routes/amenities/library.js");
+const amenitiescomputerCenter = require("./routes/amenities/computerCenter.js");
+const amenitiesmedicalservices = require("./routes/amenities/medicalservices.js");
+
 app.use("/api/", homeRoutes);
 //about us routes
 app.use("/api/aboutUs/memoir", aboutUsMemoir);
@@ -74,6 +82,15 @@ app.use("/api/courses/diploma", coursesDiploma);
 app.use("/api/courses/UG", coursesUG);
 app.use("/api/courses/UG/BSC", coursesBSC);
 app.use("/api/courses/certificate", coursesCertificate);
+
+//aminities routes
+app.use("/api/amenities/facilities", amenitiesFacilities);
+app.use("/api/amenities/hostels", amenitiesHostels);
+app.use("/api/amenities/placement", amenitiesPlacement);
+app.use("/api/amenities/sports", amenitiesSports);
+app.use("/api/amenities/library", amenitiesLibrary);
+app.use("/api/amenities/computerCenter", amenitiescomputerCenter);
+app.use("/api/amenities/medicalservices", amenitiesmedicalservices);
 
 // Start Server
 const PORT = process.env.PORT || 5000;
